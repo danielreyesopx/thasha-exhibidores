@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thasha Exhibidores - Catalogo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5ebe6;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e8a0bf 0%, #d4789c 50%, #c96b8e 100%);
+            padding: 30px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            color: rgba(255,255,255,0.9);
+            margin-top: 5px;
+            font-size: 0.95em;
+        }
+
+        .nav-categories {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 15px 20px;
+            background: white;
+            position: sticky;
+            top: 90px;
+            z-index: 99;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            scrollbar-width: none;
+        }
+
+        .nav-categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border: 2px solid #e8a0bf;
+            border-radius: 25px;
+            background: white;
+            color: #c96b8e;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: #e8a0bf;
+            color: white;
+        }
+
+        .category-section {
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .category-title {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #c96b8e;
+            margin: 30px 0 20px;
+            padding: 12px 24px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 2px solid #e8a0bf;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+
+        .product-info {
+            padding: 12px 16px;
+        }
+
+        .product-name {
+            font-size: 1em;
+            font-weight: 600;
+            color: #333;
+            text-transform: capitalize;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 0.85em;
+        }
+
+        @media (min-width: 768px) {
+            .category-section {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                max-width: 700px;
+            }
+            .category-title {
+                grid-column: 1 / -1;
+            }
+            .product-card {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Thasha Exhibidores</h1>
+        <p>Catalogo de Exhibidores de Joyeria</p>
+    </div>
+
+    <div class="nav-categories">
+        <button class="nav-btn active" onclick="scrollToCategory('fina')">Joyeria Fina</button>
+        <button class="nav-btn" onclick="scrollToCategory('negro')">Joyeria Negro</button>
+        <button class="nav-btn" onclick="scrollToCategory('gris')">Joyeria Gris</button>
+        <button class="nav-btn" onclick="scrollToCategory('yute')">Exhibidores de Yute</button>
+    </div>
+
+    <!-- Exhibidores de Joyeria Fina -->
+    <div class="category-section" id="fina">
+        <div class="category-title">Exhibidores de Joyeria Fina</div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor multi -uso_1.jpg" alt="Exhibidor Multi-uso">
+            <div class="product-info"><div class="product-name">Exhibidor Multi-uso</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de topos_1.jpg" alt="Exhibidor de Topos">
+            <div class="product-info"><div class="product-name">Exhibidor de Topos</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de pulseras_1.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de anillos.jpg" alt="Exhibidor de Anillos">
+            <div class="product-info"><div class="product-name">Exhibidor de Anillos</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de cadenas_1.jpg" alt="Exhibidor de Cadenas">
+            <div class="product-info"><div class="product-name">Exhibidor de Cadenas</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de topos_2.jpg" alt="Exhibidor de Topos">
+            <div class="product-info"><div class="product-name">Exhibidor de Topos</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de cadenas_2.jpg" alt="Exhibidor de Cadenas">
+            <div class="product-info"><div class="product-name">Exhibidor de Cadenas</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de pulseras_2.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de pulseras_3.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor multi -uso_2.jpg" alt="Exhibidor Multi-uso">
+            <div class="product-info"><div class="product-name">Exhibidor Multi-uso</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de pulseras_4.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/cuello.jpg" alt="Exhibidor de Cuello">
+            <div class="product-info"><div class="product-name">Exhibidor de Cuello</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor multi -uso_3.jpg" alt="Exhibidor Multi-uso">
+            <div class="product-info"><div class="product-name">Exhibidor Multi-uso</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor de cadenas_3.jpg" alt="Exhibidor de Cadenas">
+            <div class="product-info"><div class="product-name">Exhibidor de Cadenas</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria fina/exhibidor.jpg" alt="Exhibidor">
+            <div class="product-info"><div class="product-name">Exhibidor</div></div>
+        </div>
+    </div>
+
+    <!-- Exhibidores de Joyeria Negro -->
+    <div class="category-section" id="negro">
+        <div class="category-title">Exhibidores de Joyeria Negro</div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_01.jpg" alt="Exhibidor Negro 1">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 1</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_02.jpg" alt="Exhibidor Negro 2">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 2</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_03.jpg" alt="Exhibidor Negro 3">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 3</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_04.jpg" alt="Exhibidor Negro 4">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 4</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_05.jpg" alt="Exhibidor Negro 5">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 5</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_06.jpg" alt="Exhibidor Negro 6">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 6</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_07.jpg" alt="Exhibidor Negro 7">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 7</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_08.jpg" alt="Exhibidor Negro 8">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 8</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_09.jpg" alt="Exhibidor Negro 9">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 9</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_10.jpg" alt="Exhibidor Negro 10">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 10</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_11.jpg" alt="Exhibidor Negro 11">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 11</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_12.jpg" alt="Exhibidor Negro 12">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 12</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_13.jpg" alt="Exhibidor Negro 13">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 13</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_14.jpg" alt="Exhibidor Negro 14">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 14</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_15.jpg" alt="Exhibidor Negro 15">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 15</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_16.jpg" alt="Exhibidor Negro 16">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 16</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_17.jpg" alt="Exhibidor Negro 17">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 17</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_18.jpg" alt="Exhibidor Negro 18">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 18</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_19.jpg" alt="Exhibidor Negro 19">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 19</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_20.jpg" alt="Exhibidor Negro 20">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 20</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_21.jpg" alt="Exhibidor Negro 21">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 21</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_22.jpg" alt="Exhibidor Negro 22">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 22</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_23.jpg" alt="Exhibidor Negro 23">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 23</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_24.jpg" alt="Exhibidor Negro 24">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 24</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_25.jpg" alt="Exhibidor Negro 25">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 25</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_26.jpg" alt="Exhibidor Negro 26">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 26</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_27.jpg" alt="Exhibidor Negro 27">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 27</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_28.jpg" alt="Exhibidor Negro 28">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 28</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_29.jpg" alt="Exhibidor Negro 29">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 29</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_30.jpg" alt="Exhibidor Negro 30">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 30</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_31.jpg" alt="Exhibidor Negro 31">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 31</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_32.jpg" alt="Exhibidor Negro 32">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 32</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_33.jpg" alt="Exhibidor Negro 33">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 33</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_34.jpg" alt="Exhibidor Negro 34">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 34</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de joyeria negro/producto_35.jpg" alt="Exhibidor Negro 35">
+            <div class="product-info"><div class="product-name">Exhibidor Negro 35</div></div>
+        </div>
+    </div>
+
+    <!-- Exhibidores de Joyeria Gris -->
+    <div class="category-section" id="gris">
+        <div class="category-title">Exhibidores de Joyeria Gris</div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de cuello_1.jpg" alt="Exhibidor de Cuello">
+            <div class="product-info"><div class="product-name">Exhibidor de Cuello</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor multi-uso.jpg" alt="Exhibidor Multi-uso">
+            <div class="product-info"><div class="product-name">Exhibidor Multi-uso</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de aretes_1.jpg" alt="Exhibidor de Aretes">
+            <div class="product-info"><div class="product-name">Exhibidor de Aretes</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de pulseras_1.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de pulseras_2.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de pulseras_3.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de tobilleras.jpg" alt="Exhibidor de Tobilleras">
+            <div class="product-info"><div class="product-name">Exhibidor de Tobilleras</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de cuello_2.jpg" alt="Exhibidor de Cuello">
+            <div class="product-info"><div class="product-name">Exhibidor de Cuello</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de aretes_2.jpg" alt="Exhibidor de Aretes">
+            <div class="product-info"><div class="product-name">Exhibidor de Aretes</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de cadenas.jpg" alt="Exhibidor de Cadenas">
+            <div class="product-info"><div class="product-name">Exhibidor de Cadenas</div></div>
+        </div>
+
+        <div class="product-card">
+            <img src="Exhibidores de joyeria gris/exhibidor de pulseras_4.jpg" alt="Exhibidor de Pulseras">
+            <div class="product-info"><div class="product-name">Exhibidor de Pulseras</div></div>
+        </div>
+    </div>
+
+    <!-- Exhibidores de Yute -->
+    <div class="category-section" id="yute">
+        <div class="category-title">Exhibidores de Yute</div>
+
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_01.jpg" alt="Exhibidor de Yute 1">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 1</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_02.jpg" alt="Exhibidor de Yute 2">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 2</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_03.jpg" alt="Exhibidor de Yute 3">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 3</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_04.jpg" alt="Exhibidor de Yute 4">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 4</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_05.jpg" alt="Exhibidor de Yute 5">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 5</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_06.jpg" alt="Exhibidor de Yute 6">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 6</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_07.jpg" alt="Exhibidor de Yute 7">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 7</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_08.jpg" alt="Exhibidor de Yute 8">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 8</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_09.jpg" alt="Exhibidor de Yute 9">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 9</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_10.jpg" alt="Exhibidor de Yute 10">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 10</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_11.jpg" alt="Exhibidor de Yute 11">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 11</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_12.jpg" alt="Exhibidor de Yute 12">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 12</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_13.jpg" alt="Exhibidor de Yute 13">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 13</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_14.jpg" alt="Exhibidor de Yute 14">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 14</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_15.jpg" alt="Exhibidor de Yute 15">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 15</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_16.jpg" alt="Exhibidor de Yute 16">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 16</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_17.jpg" alt="Exhibidor de Yute 17">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 17</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_18.jpg" alt="Exhibidor de Yute 18">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 18</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_19.jpg" alt="Exhibidor de Yute 19">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 19</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_20.jpg" alt="Exhibidor de Yute 20">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 20</div></div>
+        </div>
+        <div class="product-card">
+            <img src="Exhibidores de Yute/producto_21.jpg" alt="Exhibidor de Yute 21">
+            <div class="product-info"><div class="product-name">Exhibidor de Yute 21</div></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Thasha Exhibidores - Catalogo 2026</p>
+    </div>
+
+    <script>
+        function scrollToCategory(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Update active button on scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['fina', 'negro', 'gris', 'yute'];
+            const buttons = document.querySelectorAll('.nav-btn');
+            let current = '';
+
+            sections.forEach(id => {
+                const section = document.getElementById(id);
+                if (section && window.scrollY >= section.offsetTop - 200) {
+                    current = id;
+                }
+            });
+
+            buttons.forEach((btn, i) => {
+                btn.classList.remove('active');
+                if (sections[i] === current) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
