@@ -1,0 +1,18 @@
+# Local Netlify folder
+.netlify
+
+# Python venv (42K+ files)
+venv/
+
+# Inpainting work dirs (created at runtime by auto_process.py, removed on success)
+_work/
+_masks_yute/
+_to_inpaint_yute/
+
+# NOTE: the "- sin precio/" folders are the LIVE catalog images (index.html points
+# at them), so they are intentionally tracked and deployed — do not ignore them.
+
+# Meta
+.git/
+.github/
+.netlifyignore
